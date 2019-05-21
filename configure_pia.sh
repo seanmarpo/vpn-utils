@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "[INFO] Installing openvpn & ufw..."
+sudo apt update && sudo apt install openvpn ufw -y
+
 echo "[INFO] Creating VPN file structure..."
 rm -rf ~/pia-vpn 2> /dev/null
 mkdir -p ~/pia-vpn
@@ -27,6 +30,10 @@ echo "PIA Password:"
 read -s password
 echo "$user" > pia.conf
 echo "$password" >> pia.conf
+
+# It just feels better to restrict permissions on this.
+# Does not add a whole lot though.
+chmod 600 ~/pia-vpn/pia.conf
 
 echo "[SUCCESS] PIA configured"
 
