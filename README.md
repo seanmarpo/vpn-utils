@@ -18,3 +18,9 @@ My (slightly sane) way to manage PIA VPN on my VMs. Sometimes you just don't wan
 
 ## Caveats
 Your PIA credentials are saved in plaintext to disk at: `~/pia-vpn/pia.conf`. This is not ideal. I recognize this. I use these on VMs, so my risk is a lot less considering the host OS has all the other security features I deem necessary enabled. Obviously, consider your own risk tolerance if you so decide to use this.
+
+## Does this work on X?
+This has only been tested on Debian-based *nix OSes. Considering the heavy use of `apt` you will at the very least need this available.
+Tested on:
+* Kali Rolling
+* Ubuntu 19.04
